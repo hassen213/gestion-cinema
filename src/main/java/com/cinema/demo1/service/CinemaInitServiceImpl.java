@@ -47,7 +47,7 @@ public class CinemaInitServiceImpl implements ICinemaInitService{
     @Override
     public void initCinemas() {
         villeRepository.findAll().forEach(v->{
-            Stream.of("MegaRama","IMAX","Founoun","Chahrazad","Daouliz")
+            Stream.of("MegaRama","IMAX1","Founoun","Chehrazad","Daouliz")
                     .forEach(nameCinema->{
                         Cinema cinema=new Cinema();
                         cinema.setName(nameCinema);
@@ -104,7 +104,7 @@ public class CinemaInitServiceImpl implements ICinemaInitService{
 
     @Override
     public void initCategories() {
-        Stream.of("Histoire","Drama","Actions","horror").forEach(cat->{
+        Stream.of("Histoire","Drama","Crime","Horror").forEach(cat->{
             Categorie categorie=new Categorie();
             categorie.setName(cat);
             categorieRepository.save(categorie);
