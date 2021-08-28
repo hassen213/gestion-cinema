@@ -7,7 +7,6 @@ import com.cinema.demo1.entities.Film;
 import com.cinema.demo1.entities.Projection;
 import com.cinema.demo1.entities.Ticket;
 import com.cinema.demo1.entities.User;
-import com.cinema.demo1.service.CinemaInitServiceImpl;
 import com.cinema.demo1.service.RegistrationService;
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -70,6 +69,7 @@ public class CinemaRestController {
     public List<Film> getallfilms(){
         return filmRepository.findAll();
     }
+
 
     @GetMapping("/projectionss")
     public List<Projection> getallprojections(){

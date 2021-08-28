@@ -104,7 +104,7 @@ public class CinemaInitServiceImpl implements ICinemaInitService{
 
     @Override
     public void initCategories() {
-        Stream.of("Histoire","Drama","Actions","Fictions").forEach(cat->{
+        Stream.of("Histoire","Drama","Actions","horror").forEach(cat->{
             Categorie categorie=new Categorie();
             categorie.setName(cat);
             categorieRepository.save(categorie);
